@@ -14,6 +14,8 @@ import Pie from '../charts/pie'
 const {Footer, Sider, Content } = Layout;
 
 export default function Admin(props) {
+    //clear user
+    // localStorage.removeItem('user')
     let user = localStorage.getItem('user')
     useEffect(() => {
         if (user===null||user===undefined) {
@@ -24,13 +26,13 @@ export default function Admin(props) {
 
     return (
         
-        <Layout style={{height:'100%'}}>
+        <Layout style={{ height:'100%'}}>
             <Sider>
                 <LeftNav />
             </Sider>
             <Layout>
                 <Header/>
-                <Content>
+                <Content style={{ margin:'20px',background:'#fff'}}>
                 <Switch>
                     <Redirect from='/' exact to='/home'/>
                     <Route path='/home' component={Home}/>

@@ -88,14 +88,14 @@ export default function Login(props) {
                         required: true,
                         message: 'Please input your password!',
                         },
-                        { type: 'string', },
+                        
                         {
                             min: 4,
                             message: 'at lesst  4 ',
                         },
                         {
-                            pattern: /^[a-zA-Z0-9_]+$/,
-                            message: '大小写或者下划线!',
+                            pattern: /[a-zA-Z0-9_]+/,
+                            message: '大小写数字或者下划线!',
                         }
                     ]}
                 >
