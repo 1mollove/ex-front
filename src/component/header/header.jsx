@@ -5,7 +5,6 @@ import { ExclamationCircleOutlined } from '@ant-design/icons';
 import  './header.less'
  function Header(props) {
     let user = localStorage.getItem('user')
-    
     const logoinOut = () => {
         
         Modal.confirm({
